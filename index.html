@@ -1,0 +1,691 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Elementary Educator Coding & AI Training | Portfolio Showcase - Rizan</title>
+  <meta name="description" content="Instructor & Evaluator showcase for 78 elementary school teachers across 3 Batam cohorts (Batam_04, Batam_05, Batam_06) under KEMENDIKDAS & Dinas Pendidikan Kota Batam program hosted by Koding Next Batam.">
+  
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            canvas: '#fcfcfc',
+            surface: '#ffffff',
+            surfaceDark: '#09090b',
+            zincBorder: '#e4e4e7',
+            zincBorderDark: '#27272a',
+            charcoal: '#09090b',
+            subtleGrey: '#71717a',
+            lightGrey: '#f4f4f5',
+            midGrey: '#a1a1aa'
+          },
+          fontFamily: {
+            sans: ['Inter', 'system-ui', '-apple-system', 'sans-serif']
+          }
+        }
+      }
+    }
+  </script>
+  
+  <!-- Google Fonts Inter -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+  
+  <style>
+    body {
+      background-color: #fcfcfc;
+      color: #09090b;
+      font-family: 'Inter', system-ui, sans-serif;
+    }
+    
+    .img-zoom {
+      overflow: hidden;
+    }
+    .img-zoom img {
+      transition: transform 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+    }
+    .img-zoom:hover img {
+      transform: scale(1.05);
+    }
+
+    .lightbox-backdrop {
+      background-color: rgba(9, 9, 11, 0.92);
+      backdrop-filter: blur(8px);
+    }
+
+    .batch-panel {
+      transition: opacity 0.3s ease, transform 0.3s ease;
+    }
+    .batch-panel.hidden-panel {
+      display: none;
+      opacity: 0;
+      transform: translateY(10px);
+    }
+  </style>
+</head>
+<body class="min-h-screen flex flex-col justify-between antialiased selection:bg-charcoal selection:text-white">
+
+  <header class="sticky top-0 z-40 bg-surface/80 backdrop-blur-md border-b border-zincBorder">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-16 flex items-center justify-between">
+      <!-- Title Identifier -->
+      <span class="text-xs sm:text-sm font-bold uppercase tracking-wider text-charcoal">Portfolio Showcase</span>
+
+      <!-- Navigation Links -->
+      <nav class="flex space-x-4 sm:space-x-6 text-xs font-semibold uppercase tracking-wider text-subtleGrey">
+        <a href="#overview" class="hover:text-charcoal transition-colors">Overview</a>
+        <a href="#metrics" class="hover:text-charcoal transition-colors">Impact</a>
+        <a href="#framework" class="hover:text-charcoal transition-colors">Framework</a>
+        <a href="#batch-gallery" class="hover:text-charcoal transition-colors">Gallery</a>
+        <a href="#curriculum" class="hover:text-charcoal transition-colors">Curriculum</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="flex-grow">
+    
+    <!-- Hero Header -->
+    <section class="py-16 sm:py-24 border-b border-zincBorder bg-surface">
+      <div class="max-w-4xl mx-auto px-4 sm:px-6 text-center">
+        <!-- Official Collaboration Badge -->
+        <div class="inline-flex items-center px-3.5 py-1 rounded-full text-xs font-mono font-semibold uppercase tracking-widest bg-lightGrey text-charcoal mb-6 border border-zincBorder">
+          KEMENDIKDAS • Dinas Pendidikan Kota Batam • Koding Next
+        </div>
+        
+        <!-- Main Title -->
+        <h1 id="heroTitle" class="text-3xl sm:text-5xl md:text-6xl font-extrabold text-charcoal tracking-tight mb-6 leading-tight">
+          Coding & AI Educator Certification Program
+        </h1>
+        
+        <!-- Subtitle -->
+        <p id="heroSubtitle" class="text-base sm:text-lg text-subtleGrey font-normal max-w-3xl mx-auto mb-8 leading-relaxed">
+          Master Trainer & Instructor leading IN-1, ON-The-Job Training evaluation, and final certification for 78 elementary school teachers across Batam_04, Batam_05, and Batam_06 cohorts.
+        </p>
+
+        <!-- Meta Information Pills -->
+        <div class="flex flex-wrap justify-center gap-2.5 text-xs font-mono text-charcoal">
+          <span class="px-3.5 py-1.5 bg-lightGrey border border-zincBorder rounded-md">🏛️ KEMENDIKDAS Initiative</span>
+          <span class="px-3.5 py-1.5 bg-lightGrey border border-zincBorder rounded-md">📍 Dinas Pendidikan Kota Batam Partnership</span>
+          <span class="px-3.5 py-1.5 bg-lightGrey border border-zincBorder rounded-md">🏫 Hosted by Koding Next Batam</span>
+        </div>
+      </div>
+    </section>
+
+    <section id="metrics" class="py-12 border-b border-zincBorder bg-canvas">
+      <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="grid grid-cols-2 md:grid-cols-4 gap-4 sm:gap-6">
+          
+          <div class="bg-surface p-6 rounded-2xl border border-zincBorder shadow-sm text-center">
+            <div class="text-3xl sm:text-4xl font-extrabold text-charcoal tracking-tight mb-1">78</div>
+            <div class="text-xs font-bold uppercase tracking-wider text-charcoal">Teachers Trained</div>
+            <p class="text-xs text-subtleGrey mt-1">26 Teachers per Batch</p>
+          </div>
+
+          <div class="bg-surface p-6 rounded-2xl border border-zincBorder shadow-sm text-center">
+            <div class="text-3xl sm:text-4xl font-extrabold text-charcoal tracking-tight mb-1">40 Hours</div>
+            <div class="text-xs font-bold uppercase tracking-wider text-charcoal">IN-Service 1 (In-1)</div>
+            <p class="text-xs text-subtleGrey mt-1">5 Days Intensive Direct Training</p>
+          </div>
+
+          <div class="bg-surface p-6 rounded-2xl border border-zincBorder shadow-sm text-center">
+            <div class="text-3xl sm:text-4xl font-extrabold text-charcoal tracking-tight mb-1">102 JP</div>
+            <div class="text-xs font-bold uppercase tracking-wider text-charcoal">ON-Job Training (OJT)</div>
+            <p class="text-xs text-subtleGrey mt-1">Classroom Project Implementation</p>
+          </div>
+
+          <div class="bg-surface p-6 rounded-2xl border border-zincBorder shadow-sm text-center">
+            <div class="text-3xl sm:text-4xl font-extrabold text-charcoal tracking-tight mb-1">5 Modules</div>
+            <div class="text-xs font-bold uppercase tracking-wider text-charcoal">National Curriculum</div>
+            <p class="text-xs text-subtleGrey mt-1">Full Pedagogical & Technical Scope</p>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <section id="overview" class="py-16 sm:py-20 border-b border-zincBorder bg-surface">
+      <div class="max-w-4xl mx-auto px-4 sm:px-6">
+        <div class="bg-surface p-8 sm:p-10 rounded-2xl border border-zincBorder shadow-sm relative overflow-hidden">
+          <div class="absolute top-0 left-0 w-1.5 h-full bg-charcoal"></div>
+          <h2 class="text-xs font-mono uppercase tracking-widest text-subtleGrey mb-2">Program Overview & Partnerships</h2>
+          <h3 class="text-2xl sm:text-3xl font-bold text-charcoal mb-4 tracking-tight">National Curriculum Implementation in Batam</h3>
+          <p id="overviewText" class="text-subtleGrey leading-relaxed text-sm sm:text-base mb-4">
+            Initiated by <strong>KEMENDIKDAS Indonesia</strong> (Ministry of Primary and Secondary Education) in partnership with <strong>Dinas Pendidikan Kota Batam</strong> (Batam City Education Department), this comprehensive training program prepares elementary educators to integrate Coding and AI into the national curriculum.
+          </p>
+          <p class="text-subtleGrey leading-relaxed text-sm sm:text-base">
+            As a Master Trainer representing <strong>Koding Next Batam</strong> alongside my co-instructor, I was responsible for delivering the 5-day IN-Service Training 1 (In-1), monitoring and evaluating the 102 JP ON-The-Job Training (OJT) classroom projects, conducting the final IN-Service Training 2 (In-2) evaluations, and issuing official pass/fail certification decisions.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <section id="framework" class="py-16 sm:py-20 border-b border-zincBorder bg-canvas">
+      <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center max-w-2xl mx-auto mb-12">
+          <div class="text-xs font-mono uppercase tracking-widest text-subtleGrey mb-1">Methodology</div>
+          <h2 class="text-2xl sm:text-4xl font-extrabold text-charcoal tracking-tight">Three-Phase Training Lifecycle</h2>
+          <p class="text-xs sm:text-sm text-subtleGrey mt-2">Structured according to national teacher professional development standards.</p>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+          
+          <!-- Phase 1 Card -->
+          <div class="bg-surface p-6 sm:p-8 rounded-2xl border border-zincBorder shadow-sm relative flex flex-col justify-between">
+            <div>
+              <span class="px-3 py-1 rounded-full text-xs font-mono font-bold bg-charcoal text-white inline-block mb-4">Phase 1 • IN-1</span>
+              <h3 class="text-lg font-bold text-charcoal mb-2">IN-Service Training 1</h3>
+              <p class="text-xs font-mono text-subtleGrey mb-4">⏱️ 5 Days • 8 Hours/Day (40 Hours Direct Instruction)</p>
+              <p class="text-xs sm:text-sm text-subtleGrey leading-relaxed mb-4">
+                Direct classroom delivery of 5 core modules, group discussion breakouts, Q&A sessions, and hands-on laboratory exercises hosted at Koding Next Batam.
+              </p>
+            </div>
+            <div class="pt-4 border-t border-zincBorder text-xs text-charcoal font-semibold">
+              Role: Lead Instructor & Facilitator
+            </div>
+          </div>
+
+          <!-- Phase 2 Card -->
+          <div class="bg-surface p-6 sm:p-8 rounded-2xl border border-zincBorder shadow-sm relative flex flex-col justify-between">
+            <div>
+              <span class="px-3 py-1 rounded-full text-xs font-mono font-bold bg-charcoal text-white inline-block mb-4">Phase 2 • OJT</span>
+              <h3 class="text-lg font-bold text-charcoal mb-2">ON-The-Job Training</h3>
+              <p class="text-xs font-mono text-subtleGrey mb-4">⏱️ 102 JP Total • 12 Weeks Implementation</p>
+              <p class="text-xs sm:text-sm text-subtleGrey leading-relaxed mb-4">
+                Teachers return to their respective elementary schools to apply Modules 2–4 with students, record lesson execution, and draft best practice reports (<I>Praktik Baik</I>).
+              </p>
+            </div>
+            <div class="pt-4 border-t border-zincBorder text-xs text-charcoal font-semibold">
+              Role: Project Mentor & Field Evaluator
+            </div>
+          </div>
+
+          <!-- Phase 3 Card -->
+          <div class="bg-surface p-6 sm:p-8 rounded-2xl border border-zincBorder shadow-sm relative flex flex-col justify-between">
+            <div>
+              <span class="px-3 py-1 rounded-full text-xs font-mono font-bold bg-charcoal text-white inline-block mb-4">Phase 3 • IN-2</span>
+              <h3 class="text-lg font-bold text-charcoal mb-2">IN-Service Training 2</h3>
+              <p class="text-xs font-mono text-subtleGrey mb-4">⏱️ Final Examination & Report Defense</p>
+              <p class="text-xs sm:text-sm text-subtleGrey leading-relaxed mb-4">
+                Comprehensive evaluation, grading project portfolios, reviewing classroom report defenses, and issuing pass/fail decisions for official certification.
+              </p>
+            </div>
+            <div class="pt-4 border-t border-zincBorder text-xs text-charcoal font-semibold">
+              Role: Final Examiner & Certifying Assessor
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <section id="batch-gallery" class="py-16 sm:py-24 border-b border-zincBorder bg-surface">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        
+        <div class="flex flex-col md:flex-row md:items-end justify-between mb-10 gap-6">
+          <div>
+            <div class="text-xs font-mono uppercase tracking-widest text-subtleGrey mb-1">Activity Gallery</div>
+            <h2 class="text-2xl sm:text-4xl font-extrabold text-charcoal tracking-tight">Workshop Highlights</h2>
+            <p class="text-xs sm:text-sm text-subtleGrey mt-1">Filter by instructor role or individual batch cohorts.</p>
+          </div>
+
+          <!-- Batch Tabs -->
+          <div class="flex flex-wrap gap-2 text-xs font-semibold">
+            <button onclick="switchBatch('instructor')" id="tab-instructor" class="batch-tab px-4 py-2 rounded-full bg-charcoal text-white transition-all shadow-sm border border-charcoal">Instructor Highlights</button>
+            <button onclick="switchBatch('batam_04')" id="tab-batam_04" class="batch-tab px-4 py-2 rounded-full bg-surface text-charcoal hover:bg-lightGrey transition-all border border-zincBorder">Batch Batam_04</button>
+            <button onclick="switchBatch('batam_05')" id="tab-batam_05" class="batch-tab px-4 py-2 rounded-full bg-surface text-charcoal hover:bg-lightGrey transition-all border border-zincBorder">Batch Batam_05</button>
+            <button onclick="switchBatch('batam_06')" id="tab-batam_06" class="batch-tab px-4 py-2 rounded-full bg-surface text-charcoal hover:bg-lightGrey transition-all border border-zincBorder">Batch Batam_06</button>
+          </div>
+        </div>
+
+        <!-- BATCH PANEL: INSTRUCTOR HIGHLIGHTS -->
+        <div id="panel-instructor" class="batch-panel space-y-4 sm:space-y-6">
+          <div class="flex items-center justify-between border-b border-zincBorder pb-4">
+            <div>
+              <span class="text-xs font-mono font-bold uppercase text-subtleGrey">Master Trainer Leadership</span>
+              <h3 class="text-xl font-bold text-charcoal">Instructor & Evaluator Activities</h3>
+            </div>
+            <span class="px-3 py-1 bg-charcoal text-white rounded-full text-xs font-mono">Facilitator Spotlight</span>
+          </div>
+
+          <div class="grid grid-cols-1 md:grid-cols-3 gap-4 sm:gap-6">
+            
+            <div class="md:col-span-2 group relative img-zoom rounded-2xl border-2 border-charcoal bg-surface cursor-pointer shadow-md overflow-hidden" onclick="openLightbox('./images/photo1.jpg', 'Delivering Module 1 & 2 presentations during IN-Service Training 1')">
+              <img src="./images/photo1.jpg" alt="Keynote Presentation" class="w-full h-80 sm:h-96 object-cover grayscale group-hover:grayscale-0 transition-all duration-700" onerror="handleImageError(this, 'IN-1 Direct Instruction & Module Presentations')">
+              <div class="absolute inset-0 bg-gradient-to-t from-charcoal/95 via-charcoal/30 to-transparent opacity-85 group-hover:opacity-95 transition-opacity"></div>
+              <div class="absolute top-4 left-4 z-10">
+                <span class="inline-flex items-center px-3 py-1 rounded-full text-[11px] font-mono font-bold bg-charcoal text-white border border-zincBorderDark">IN-1 Presentation</span>
+              </div>
+              <div class="absolute bottom-0 left-0 p-6 text-white">
+                <h4 class="text-lg sm:text-2xl font-bold tracking-tight">Direct Instruction & Module Lectures</h4>
+                <p class="text-xs sm:text-sm text-midGrey mt-1 max-w-xl">Presenting official KEMENDIKDAS curriculum modules on Coding, AI concepts, and Computational Thinking.</p>
+              </div>
+            </div>
+
+            <div class="group relative img-zoom rounded-2xl border-2 border-charcoal bg-surface cursor-pointer shadow-md overflow-hidden" onclick="openLightbox('./images/photo2.jpg', 'Evaluating teacher group discussions and answering pedagogical queries')">
+              <img src="./images/photo2.jpg" alt="Q&A & Evaluation" class="w-full h-80 sm:h-96 object-cover grayscale group-hover:grayscale-0 transition-all duration-700" onerror="handleImageError(this, 'Q&A & Group Discussion Evaluation')">
+              <div class="absolute inset-0 bg-gradient-to-t from-charcoal/90 via-charcoal/20 to-transparent opacity-85 group-hover:opacity-95 transition-opacity"></div>
+              <div class="absolute top-4 left-4 z-10">
+                <span class="inline-flex items-center px-2.5 py-0.5 rounded text-[10px] font-mono font-bold bg-charcoal text-white border border-zincBorderDark">Interactive Q&A</span>
+              </div>
+              <div class="absolute bottom-0 left-0 p-6 text-white">
+                <h4 class="text-base font-bold tracking-tight">Facilitating Q&A & Group Work</h4>
+                <p class="text-xs text-midGrey mt-1">Guiding small group discussions and evaluating problem-solving approaches.</p>
+              </div>
+            </div>
+
+            <div class="group relative img-zoom rounded-2xl border border-zincBorder bg-surface cursor-pointer shadow-sm overflow-hidden" onclick="openLightbox('./images/photo3.jpg', 'Evaluating teacher project reports and grading classroom portfolios')">
+              <img src="./images/photo3.jpg" alt="OJT Evaluation" class="w-full h-64 object-cover grayscale group-hover:grayscale-0 transition-all duration-700" onerror="handleImageError(this, 'Grading OJT Reports & Best Practices')">
+              <div class="absolute inset-0 bg-gradient-to-t from-charcoal/90 via-charcoal/20 to-transparent opacity-80 group-hover:opacity-90 transition-opacity"></div>
+              <div class="absolute bottom-0 left-0 p-5 text-white">
+                <span class="inline-block px-2 py-0.5 rounded text-[10px] font-mono font-bold bg-white text-charcoal mb-1">Grading & Review</span>
+                <h4 class="text-sm font-bold tracking-tight">Portfolio & Report Evaluation</h4>
+              </div>
+            </div>
+
+            <div class="group relative img-zoom rounded-2xl border border-zincBorder bg-surface cursor-pointer shadow-sm overflow-hidden" onclick="openLightbox('./images/photo4.jpg', 'Conducting final IN-Service Training 2 assessment and grading')">
+              <img src="./images/photo4.jpg" alt="IN-2 Final Exam" class="w-full h-64 object-cover grayscale group-hover:grayscale-0 transition-all duration-700" onerror="handleImageError(this, 'IN-2 Final Assessment & Exam')">
+              <div class="absolute inset-0 bg-gradient-to-t from-charcoal/90 via-charcoal/20 to-transparent opacity-80 group-hover:opacity-90 transition-opacity"></div>
+              <div class="absolute bottom-0 left-0 p-5 text-white">
+                <span class="inline-block px-2 py-0.5 rounded text-[10px] font-mono font-bold bg-white text-charcoal mb-1">IN-2 Exam</span>
+                <h4 class="text-sm font-bold tracking-tight">IN-2 Assessment & Pass Decision</h4>
+              </div>
+            </div>
+
+            <div class="group relative img-zoom rounded-2xl border border-zincBorder bg-surface cursor-pointer shadow-sm overflow-hidden" onclick="openLightbox('./images/photo5.jpg', 'Koding Next Batam Team')">
+              <img src="./images/photo5.jpg" alt="Koding Next Batam Team" class="w-full h-64 object-cover grayscale group-hover:grayscale-0 transition-all duration-700" onerror="handleImageError(this, 'Koding Next Batam Team')">
+              <div class="absolute inset-0 bg-gradient-to-t from-charcoal/90 via-charcoal/20 to-transparent opacity-80 group-hover:opacity-90 transition-opacity"></div>
+              <div class="absolute bottom-0 left-0 p-5 text-white">
+                <span class="inline-block px-2 py-0.5 rounded text-[10px] font-mono font-bold bg-white text-charcoal mb-1">Team</span>
+                <h4 class="text-sm font-bold tracking-tight">Koding Next Batam Team</h4>
+              </div>
+            </div>
+
+          </div>
+        </div>
+
+        <!-- BATCH PANEL: BATAM_04 -->
+        <div id="panel-batam_04" class="batch-panel hidden-panel space-y-4 sm:space-y-6">
+          <div class="flex items-center justify-between border-b border-zincBorder pb-4">
+            <div>
+              <span class="text-xs font-mono font-bold uppercase text-subtleGrey">Cohort 01 of 03</span>
+              <h3 class="text-xl font-bold text-charcoal">Batch Batam_04 Showcase</h3>
+            </div>
+            <span class="px-3 py-1 bg-charcoal text-white rounded-full text-xs font-mono">26 Elementary Teachers</span>
+          </div>
+
+          <div class="grid grid-cols-1 md:grid-cols-3 gap-4 sm:gap-6">
+            
+            <div class="md:col-span-2 group relative img-zoom rounded-2xl border border-zincBorder bg-surface cursor-pointer shadow-sm overflow-hidden" onclick="openLightbox('./images/04_1.jpg', 'Batam_04 Cohort: IN-1 Module presentation and opening ceremony')">
+              <img src="./images/04_1.jpg" alt="Batam_04 Kickoff" class="w-full h-80 sm:h-96 object-cover grayscale group-hover:grayscale-0 transition-all duration-700" onerror="handleImageError(this, 'Batch Batam_04: IN-1 Orientation & Modules 1-2')">
+              <div class="absolute inset-0 bg-gradient-to-t from-charcoal/90 via-charcoal/20 to-transparent opacity-80 group-hover:opacity-90 transition-opacity"></div>
+              <div class="absolute top-4 left-4 z-10">
+                <span class="inline-flex items-center px-2.5 py-0.5 rounded text-[10px] font-mono font-bold bg-white text-charcoal">IN-1 Kickoff</span>
+              </div>
+              <div class="absolute bottom-0 left-0 p-6 text-white">
+                <h4 class="text-lg sm:text-2xl font-bold tracking-tight">Batam_04 IN-Service Training 1 Kickoff</h4>
+                <p class="text-xs sm:text-sm text-midGrey mt-1 max-w-xl">Introducing national curriculum standards for Coding & AI to the first cohort of 26 teachers.</p>
+              </div>
+            </div>
+
+            <div class="group relative img-zoom rounded-2xl border border-zincBorder bg-surface cursor-pointer shadow-sm overflow-hidden" onclick="openLightbox('./images/04_2.jpg', 'Batam_04 Cohort: Module 2 Computational Thinking group exercise')">
+              <img src="./images/04_2.jpg" alt="Batam_04 Group Discussion" class="w-full h-80 sm:h-96 object-cover grayscale group-hover:grayscale-0 transition-all duration-700" onerror="handleImageError(this, 'Batch Batam_04: Computational Thinking Workshop')">
+              <div class="absolute inset-0 bg-gradient-to-t from-charcoal/90 via-charcoal/20 to-transparent opacity-80 group-hover:opacity-90 transition-opacity"></div>
+              <div class="absolute top-4 left-4 z-10">
+                <span class="inline-flex items-center px-2.5 py-0.5 rounded text-[10px] font-mono font-bold bg-white text-charcoal">Group Discussion</span>
+              </div>
+              <div class="absolute bottom-0 left-0 p-6 text-white">
+                <h4 class="text-base font-bold tracking-tight">Group Logic Mapping</h4>
+                <p class="text-xs text-midGrey mt-1">Teachers collaborating on algorithm design and lesson plans.</p>
+              </div>
+            </div>
+
+            <div class="group relative img-zoom rounded-2xl border border-zincBorder bg-surface cursor-pointer shadow-sm overflow-hidden" onclick="openLightbox('./images/04_3.jpg', 'Batam_04 Cohort: OJT classroom application and student project implementation')">
+              <img src="./images/04_3.jpg" alt="Batam_04 OJT Project" class="w-full h-64 object-cover grayscale group-hover:grayscale-0 transition-all duration-700" onerror="handleImageError(this, 'Batch Batam_04: OJT Student Implementation')">
+              <div class="absolute inset-0 bg-gradient-to-t from-charcoal/90 via-charcoal/20 to-transparent opacity-80 group-hover:opacity-90 transition-opacity"></div>
+              <div class="absolute bottom-0 left-0 p-5 text-white">
+                <span class="inline-block px-2 py-0.5 rounded text-[10px] font-mono font-bold bg-white text-charcoal mb-1">OJT Classroom</span>
+                <h4 class="text-sm font-bold tracking-tight">Classroom OJT Application</h4>
+              </div>
+            </div>
+
+            <div class="group relative img-zoom rounded-2xl border border-zincBorder bg-surface cursor-pointer shadow-sm overflow-hidden" onclick="openLightbox('./images/04_4.jpg', 'Batam_04 Cohort: Best Practice report writing and project defense')">
+              <img src="./images/04_4.jpg" alt="Batam_04 Report Review" class="w-full h-64 object-cover grayscale group-hover:grayscale-0 transition-all duration-700" onerror="handleImageError(this, 'Batch Batam_04: Best Practice Defense')">
+              <div class="absolute inset-0 bg-gradient-to-t from-charcoal/90 via-charcoal/20 to-transparent opacity-80 group-hover:opacity-90 transition-opacity"></div>
+              <div class="absolute bottom-0 left-0 p-5 text-white">
+                <span class="inline-block px-2 py-0.5 rounded text-[10px] font-mono font-bold bg-white text-charcoal mb-1">Praktik Baik</span>
+                <h4 class="text-sm font-bold tracking-tight">Best Practice Report Defense</h4>
+              </div>
+            </div>
+
+            <div class="group relative img-zoom rounded-2xl border border-zincBorder bg-surface cursor-pointer shadow-sm overflow-hidden" onclick="openLightbox('./images/04_5.jpg', 'Batam_04 Cohort: IN-2 evaluation and certification ceremony')">
+              <img src="./images/04_5.jpg" alt="Batam_04 Graduation" class="w-full h-64 object-cover grayscale group-hover:grayscale-0 transition-all duration-700" onerror="handleImageError(this, 'Batch Batam_04: Certification & IN-2 Wrap-up')">
+              <div class="absolute inset-0 bg-gradient-to-t from-charcoal/90 via-charcoal/20 to-transparent opacity-80 group-hover:opacity-90 transition-opacity"></div>
+              <div class="absolute bottom-0 left-0 p-5 text-white">
+                <span class="inline-block px-2 py-0.5 rounded text-[10px] font-mono font-bold bg-white text-charcoal mb-1">Certification</span>
+                <h4 class="text-sm font-bold tracking-tight">IN-2 Certification Graduation</h4>
+              </div>
+            </div>
+
+          </div>
+        </div>
+
+        <!-- BATCH PANEL: BATAM_05 -->
+        <div id="panel-batam_05" class="batch-panel hidden-panel space-y-4 sm:space-y-6">
+          <div class="flex items-center justify-between border-b border-zincBorder pb-4">
+            <div>
+              <span class="text-xs font-mono font-bold uppercase text-subtleGrey">Cohort 02 of 03</span>
+              <h3 class="text-xl font-bold text-charcoal">Batch Batam_05 Showcase</h3>
+            </div>
+            <span class="px-3 py-1 bg-charcoal text-white rounded-full text-xs font-mono">26 Elementary Teachers</span>
+          </div>
+
+          <div class="grid grid-cols-1 md:grid-cols-3 gap-4 sm:gap-6">
+            
+            <div class="md:col-span-2 group relative img-zoom rounded-2xl border border-zincBorder bg-surface cursor-pointer shadow-sm overflow-hidden" onclick="openLightbox('./images/05_1.jpg', 'Batam_05 Cohort: IN-1 Module 3 & 4 AI concepts lecture')">
+              <img src="./images/05_1.jpg" alt="Batam_05 AI Lecture" class="w-full h-80 sm:h-96 object-cover grayscale group-hover:grayscale-0 transition-all duration-700" onerror="handleImageError(this, 'Batch Batam_05: IN-1 AI Concepts & Tools Lecture')">
+              <div class="absolute inset-0 bg-gradient-to-t from-charcoal/90 via-charcoal/20 to-transparent opacity-80 group-hover:opacity-90 transition-opacity"></div>
+              <div class="absolute top-4 left-4 z-10">
+                <span class="inline-flex items-center px-2.5 py-0.5 rounded text-[10px] font-mono font-bold bg-white text-charcoal">AI Module</span>
+              </div>
+              <div class="absolute bottom-0 left-0 p-6 text-white">
+                <h4 class="text-lg sm:text-2xl font-bold tracking-tight">Batam_05 IN-Service Training 1 Kickoff</h4>
+                <p class="text-xs sm:text-sm text-midGrey mt-1 max-w-xl">Lecturing on basic AI concepts (Modul 3) and practical AI utilization in primary education (Modul 4).</p>
+              </div>
+            </div>
+
+            <div class="group relative img-zoom rounded-2xl border border-zincBorder bg-surface cursor-pointer shadow-sm overflow-hidden" onclick="openLightbox('./images/05_2.jpg', 'Batam_05 Cohort: Modul 5 Pedagogy workshop and lesson planning')">
+              <img src="./images/05_2.jpg" alt="Batam_05 Pedagogy Workshop" class="w-full h-80 sm:h-96 object-cover grayscale group-hover:grayscale-0 transition-all duration-700" onerror="handleImageError(this, 'Batch Batam_05: Pedagogical Strategy Workshop')">
+              <div class="absolute inset-0 bg-gradient-to-t from-charcoal/90 via-charcoal/20 to-transparent opacity-80 group-hover:opacity-90 transition-opacity"></div>
+              <div class="absolute top-4 left-4 z-10">
+                <span class="inline-flex items-center px-2.5 py-0.5 rounded text-[10px] font-mono font-bold bg-white text-charcoal">Pedagogy</span>
+              </div>
+              <div class="absolute bottom-0 left-0 p-6 text-white">
+                <h4 class="text-base font-bold tracking-tight">Group Logic Mapping</h4>
+                <p class="text-xs text-midGrey mt-1">Teachers collaborating on algorithm design and lesson plans.</p>
+              </div>
+            </div>
+
+            <div class="group relative img-zoom rounded-2xl border border-zincBorder bg-surface cursor-pointer shadow-sm overflow-hidden" onclick="openLightbox('./images/05_4.jpg', 'Batam_05 Cohort: OJT Module 3 student AI project execution')">
+              <img src="./images/05_4.jpg" alt="Batam_05 OJT Session" class="w-full h-64 object-cover grayscale group-hover:grayscale-0 transition-all duration-700" onerror="handleImageError(this, 'Batch Batam_05: OJT Student AI Project')">
+              <div class="absolute inset-0 bg-gradient-to-t from-charcoal/90 via-charcoal/20 to-transparent opacity-80 group-hover:opacity-90 transition-opacity"></div>
+              <div class="absolute bottom-0 left-0 p-5 text-white">
+                <span class="inline-block px-2 py-0.5 rounded text-[10px] font-mono font-bold bg-white text-charcoal mb-1">OJT Application</span>
+                <h4 class="text-sm font-bold tracking-tight">Module 3 OJT Implementation</h4>
+              </div>
+            </div>
+
+            <div class="group relative img-zoom rounded-2xl border border-zincBorder bg-surface cursor-pointer shadow-sm overflow-hidden" onclick="openLightbox('./images/05_3.jpg', 'Batam_05 Cohort: Reviewing best practice documentation and logbooks')">
+              <img src="./images/05_3.jpg" alt="Batam_05 Documentation" class="w-full h-64 object-cover grayscale group-hover:grayscale-0 transition-all duration-700" onerror="handleImageError(this, 'Batch Batam_05: Logbook & Report Review')">
+              <div class="absolute inset-0 bg-gradient-to-t from-charcoal/90 via-charcoal/20 to-transparent opacity-80 group-hover:opacity-90 transition-opacity"></div>
+              <div class="absolute bottom-0 left-0 p-5 text-white">
+                <span class="inline-block px-2 py-0.5 rounded text-[10px] font-mono font-bold bg-white text-charcoal mb-1">Logbooks</span>
+                <h4 class="text-sm font-bold tracking-tight">Logbook & Report Evaluation</h4>
+              </div>
+            </div>
+
+            <div class="group relative img-zoom rounded-2xl border border-zincBorder bg-surface cursor-pointer shadow-sm overflow-hidden" onclick="openLightbox('./images/05_5.jpg', 'Batam_05 Cohort: IN-2 certification and group photo')">
+              <img src="./images/05_5.jpg" alt="Batam_05 Graduation" class="w-full h-64 object-cover grayscale group-hover:grayscale-0 transition-all duration-700" onerror="handleImageError(this, 'Batch Batam_05: IN-2 Certification & Wrap-up')">
+              <div class="absolute inset-0 bg-gradient-to-t from-charcoal/90 via-charcoal/20 to-transparent opacity-80 group-hover:opacity-90 transition-opacity"></div>
+              <div class="absolute bottom-0 left-0 p-5 text-white">
+                <span class="inline-block px-2 py-0.5 rounded text-[10px] font-mono font-bold bg-white text-charcoal mb-1">Certification</span>
+                <h4 class="text-sm font-bold tracking-tight">IN-2 Certification Awarding</h4>
+              </div>
+            </div>
+
+          </div>
+        </div>
+
+        <!-- BATCH PANEL: BATAM_06 -->
+        <div id="panel-batam_06" class="batch-panel hidden-panel space-y-4 sm:space-y-6">
+          <div class="flex items-center justify-between border-b border-zincBorder pb-4">
+            <div>
+              <span class="text-xs font-mono font-bold uppercase text-subtleGrey">Cohort 03 of 03</span>
+              <h3 class="text-xl font-bold text-charcoal">Batch Batam_06 Showcase</h3>
+            </div>
+            <span class="px-3 py-1 bg-charcoal text-white rounded-full text-xs font-mono">26 Elementary Teachers</span>
+          </div>
+
+          <div class="grid grid-cols-1 md:grid-cols-3 gap-4 sm:gap-6">
+            
+            <div class="md:col-span-2 group relative img-zoom rounded-2xl border border-zincBorder bg-surface cursor-pointer shadow-sm overflow-hidden" onclick="openLightbox('./images/06_1.jpg', 'Batam_06 Cohort: IN-2 final project defense and presentation')">
+              <img src="./images/06_1.jpg" alt="Batam_06 Final Defense" class="w-full h-80 sm:h-96 object-cover grayscale group-hover:grayscale-0 transition-all duration-700" onerror="handleImageError(this, 'Batch Batam_06: IN-1 Module presentation and opening ceremony')">
+              <div class="absolute inset-0 bg-gradient-to-t from-charcoal/90 via-charcoal/20 to-transparent opacity-80 group-hover:opacity-90 transition-opacity"></div>
+              <div class="absolute top-4 left-4 z-10">
+                <span class="inline-flex items-center px-2.5 py-0.5 rounded text-[10px] font-mono font-bold bg-white text-charcoal">Final Defense</span>
+              </div>
+              <div class="absolute bottom-0 left-0 p-6 text-white">
+                <h4 class="text-lg sm:text-2xl font-bold tracking-tight">Batam_06 IN-Service Training 1 Kickoff</h4>
+                <p class="text-xs sm:text-sm text-midGrey mt-1 max-w-xl">Introducing national curriculum standards for Coding & AI to the first cohort of 26 teachers.</p>
+              </div>
+            </div>
+
+            <div class="group relative img-zoom rounded-2xl border border-zincBorder bg-surface cursor-pointer shadow-sm overflow-hidden" onclick="openLightbox('./images/06_2.jpg', 'Batam_06 Cohort: Modul 4 AI tool utilization in classroom prep')">
+              <img src="./images/06_2.jpg" alt="Batam_06 AI Lab" class="w-full h-80 sm:h-96 object-cover grayscale group-hover:grayscale-0 transition-all duration-700" onerror="handleImageError(this, 'Batch Batam_06: AI Utilization Lab')">
+              <div class="absolute inset-0 bg-gradient-to-t from-charcoal/90 via-charcoal/20 to-transparent opacity-80 group-hover:opacity-90 transition-opacity"></div>
+              <div class="absolute top-4 left-4 z-10">
+                <span class="inline-flex items-center px-2.5 py-0.5 rounded text-[10px] font-mono font-bold bg-white text-charcoal">AI Utilization</span>
+              </div>
+              <div class="absolute bottom-0 left-0 p-6 text-white">
+                <h4 class="text-base font-bold tracking-tight">Group Logic Mapping</h4>
+                <p class="text-xs text-midGrey mt-1">Teachers collaborating on algorithm design and lesson plans.</p>
+              </div>
+            </div>
+
+            <div class="group relative img-zoom rounded-2xl border border-zincBorder bg-surface cursor-pointer shadow-sm overflow-hidden" onclick="openLightbox('./images/06_3.jpg', 'Batam_06 Cohort: OJT Module 4 project execution with elementary students')">
+              <img src="./images/06_3.jpg" alt="Batam_06 OJT" class="w-full h-64 object-cover grayscale group-hover:grayscale-0 transition-all duration-700" onerror="handleImageError(this, 'Batch Batam_06: OJT Module 4 Execution')">
+              <div class="absolute inset-0 bg-gradient-to-t from-charcoal/90 via-charcoal/20 to-transparent opacity-80 group-hover:opacity-90 transition-opacity"></div>
+              <div class="absolute bottom-0 left-0 p-5 text-white">
+                <span class="inline-block px-2 py-0.5 rounded text-[10px] font-mono font-bold bg-white text-charcoal mb-1">OJT Execution</span>
+                <h4 class="text-sm font-bold tracking-tight">Module 4 OJT Project</h4>
+              </div>
+            </div>
+
+            <div class="group relative img-zoom rounded-2xl border border-zincBorder bg-surface cursor-pointer shadow-sm overflow-hidden" onclick="openLightbox('./images/06_4.jpg', 'Batam_06 Cohort: Final written assessment and evaluation')">
+              <img src="./images/06_4.jpg" alt="Batam_06 Written Test" class="w-full h-64 object-cover grayscale group-hover:grayscale-0 transition-all duration-700" onerror="handleImageError(this, 'Batch Batam_06: IN-2 Written Evaluation')">
+              <div class="absolute inset-0 bg-gradient-to-t from-charcoal/90 via-charcoal/20 to-transparent opacity-80 group-hover:opacity-90 transition-opacity"></div>
+              <div class="absolute bottom-0 left-0 p-5 text-white">
+                <span class="inline-block px-2 py-0.5 rounded text-[10px] font-mono font-bold bg-white text-charcoal mb-1">Written Test</span>
+                <h4 class="text-sm font-bold tracking-tight">IN-2 Final Written Assessment</h4>
+              </div>
+            </div>
+
+            <div class="group relative img-zoom rounded-2xl border border-zincBorder bg-surface cursor-pointer shadow-sm overflow-hidden" onclick="openLightbox('./images/06_5.jpg', 'Batam_06 Cohort & Final Multi-Batch Closing Ceremony')">
+              <img src="./images/06_5.jpg" alt="Batam_06 Closing" class="w-full h-64 object-cover grayscale group-hover:grayscale-0 transition-all duration-700" onerror="handleImageError(this, 'Batch Batam_06: Program Completion & Graduation')">
+              <div class="absolute inset-0 bg-gradient-to-t from-charcoal/90 via-charcoal/20 to-transparent opacity-80 group-hover:opacity-90 transition-opacity"></div>
+              <div class="absolute bottom-0 left-0 p-5 text-white">
+                <span class="inline-block px-2 py-0.5 rounded text-[10px] font-mono font-bold bg-white text-charcoal mb-1">Program Graduation</span>
+                <h4 class="text-sm font-bold tracking-tight">Final Certification Ceremony</h4>
+              </div>
+            </div>
+
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <section id="curriculum" class="py-16 sm:py-24 border-b border-zincBorder bg-canvas">
+      <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+        
+        <div class="text-center max-w-2xl mx-auto mb-16">
+          <div class="text-xs font-mono uppercase tracking-widest text-subtleGrey mb-1">National Curriculum Scope</div>
+          <h2 class="text-2xl sm:text-4xl font-extrabold text-charcoal tracking-tight">5 Core Curriculum Modules</h2>
+          <p class="text-xs sm:text-sm text-subtleGrey mt-2">Delivered during IN-1 and evaluated through OJT project implementations.</p>
+        </div>
+
+        <div class="space-y-6">
+          
+          <!-- Module 1 -->
+          <div class="bg-surface p-6 rounded-2xl border border-zincBorder shadow-sm flex flex-col sm:flex-row sm:items-center justify-between gap-4">
+            <div>
+              <span class="px-2.5 py-0.5 rounded text-[10px] font-mono font-bold bg-lightGrey text-charcoal border border-zincBorder mb-2 inline-block">Module 1</span>
+              <h3 class="text-base font-bold text-charcoal">Coding & Artificial Intelligence Subjects in the National Curriculum</h3>
+              <p class="text-xs text-subtleGrey mt-1"><I>Modul 1: Mata Pelajaran Koding dan Kecerdasan Artifisial pada Kurikulum Nasional</I></p>
+              <p class="text-xs sm:text-sm text-subtleGrey mt-2 leading-relaxed">
+                Alignment with KEMENDIKDAS national education policy, curriculum structures, learning outcomes, and time allocation for elementary schools.
+              </p>
+            </div>
+            <div class="text-xs font-mono text-charcoal bg-lightGrey px-3 py-1.5 rounded-md border border-zincBorder shrink-0">
+              In-1 Topic
+            </div>
+          </div>
+
+          <!-- Module 2 -->
+          <div class="bg-surface p-6 rounded-2xl border border-zincBorder shadow-sm flex flex-col sm:flex-row sm:items-center justify-between gap-4">
+            <div>
+              <span class="px-2.5 py-0.5 rounded text-[10px] font-mono font-bold bg-lightGrey text-charcoal border border-zincBorder mb-2 inline-block">Module 2</span>
+              <h3 class="text-base font-bold text-charcoal">Computational Thinking as the Foundation of Coding & AI</h3>
+              <p class="text-xs text-subtleGrey mt-1"><I>Modul 2: Berpikir Komputasional sebagai Dasar Koding dan Kecerdasan Artifisial</I></p>
+              <p class="text-xs sm:text-sm text-subtleGrey mt-2 leading-relaxed">
+                Decomposition, pattern recognition, abstraction, and algorithm design tailored for young learners.
+              </p>
+            </div>
+            <div class="text-xs font-mono text-charcoal bg-lightGrey px-3 py-1.5 rounded-md border border-zincBorder shrink-0">
+              OJT 1 Cycle (34 JP / 4 Wks)
+            </div>
+          </div>
+
+          <!-- Module 3 -->
+          <div class="bg-surface p-6 rounded-2xl border border-zincBorder shadow-sm flex flex-col sm:flex-row sm:items-center justify-between gap-4">
+            <div>
+              <span class="px-2.5 py-0.5 rounded text-[10px] font-mono font-bold bg-lightGrey text-charcoal border border-zincBorder mb-2 inline-block">Module 3</span>
+              <h3 class="text-base font-bold text-charcoal">Basic Concepts of Artificial Intelligence</h3>
+              <p class="text-xs text-subtleGrey mt-1"><I>Modul 3: Konsep Dasar Kecerdasan Artifisial</I></p>
+              <p class="text-xs sm:text-sm text-subtleGrey mt-2 leading-relaxed">
+                Fundamentals of machine learning, data recognition, computer vision basics, and age-appropriate AI principles.
+              </p>
+            </div>
+            <div class="text-xs font-mono text-charcoal bg-lightGrey px-3 py-1.5 rounded-md border border-zincBorder shrink-0">
+              OJT 2 Cycle (34 JP / 4 Wks)
+            </div>
+          </div>
+
+          <!-- Module 4 -->
+          <div class="bg-surface p-6 rounded-2xl border border-zincBorder shadow-sm flex flex-col sm:flex-row sm:items-center justify-between gap-4">
+            <div>
+              <span class="px-2.5 py-0.5 rounded text-[10px] font-mono font-bold bg-lightGrey text-charcoal border border-zincBorder mb-2 inline-block">Module 4</span>
+              <h3 class="text-base font-bold text-charcoal">Practical Application & Utilization of Artificial Intelligence</h3>
+              <p class="text-xs text-subtleGrey mt-1"><I>Modul 4: Pemanfaatan Kecerdasan Artifisial</I></p>
+              <p class="text-xs sm:text-sm text-subtleGrey mt-2 leading-relaxed">
+                Generative AI tools for elementary lesson plan creation, automated assessment, and interactive teaching assets.
+              </p>
+            </div>
+            <div class="text-xs font-mono text-charcoal bg-lightGrey px-3 py-1.5 rounded-md border border-zincBorder shrink-0">
+              OJT 3 Cycle (34 JP / 4 Wks)
+            </div>
+          </div>
+
+          <!-- Module 5 -->
+          <div class="bg-surface p-6 rounded-2xl border border-zincBorder shadow-sm flex flex-col sm:flex-row sm:items-center justify-between gap-4">
+            <div>
+              <span class="px-2.5 py-0.5 rounded text-[10px] font-mono font-bold bg-lightGrey text-charcoal border border-zincBorder mb-2 inline-block">Module 5</span>
+              <h3 class="text-base font-bold text-charcoal">Pedagogy of Coding and Artificial Intelligence</h3>
+              <p class="text-xs text-subtleGrey mt-1"><I>Modul 5: Pedagogik Koding dan Kecerdasan Artifisial</I></p>
+              <p class="text-xs sm:text-sm text-subtleGrey mt-2 leading-relaxed">
+                Teaching methodologies, classroom management during tech labs, student evaluation rubrics, and Best Practice (<I>Praktik Baik</I>) report writing.
+              </p>
+            </div>
+            <div class="text-xs font-mono text-charcoal bg-lightGrey px-3 py-1.5 rounded-md border border-zincBorder shrink-0">
+              In-2 Defense Scope
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="bg-surface border-t border-zincBorder py-10">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col sm:flex-row items-center justify-between text-xs text-subtleGrey gap-4">
+      <div>
+        <p class="font-bold text-charcoal">Portfolio Showcase • Rizan</p>
+        <p class="mt-0.5">Elementary Educator Coding & AI Workshop (Batam_04, Batam_05, Batam_06)</p>
+      </div>
+      <div class="text-right">
+        <p>KEMENDIKDAS • Dinas Pendidikan Kota Batam • Koding Next Batam</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Lightbox Modal -->
+  <div id="lightboxModal" class="fixed inset-0 z-50 hidden flex items-center justify-center p-4 lightbox-backdrop" onclick="closeLightbox(event)">
+    <div class="relative max-w-5xl w-full bg-surfaceDark rounded-2xl overflow-hidden border border-zincBorderDark shadow-2xl" onclick="event.stopPropagation()">
+      <button onclick="closeLightbox()" class="absolute top-4 right-4 z-10 w-9 h-9 rounded-full bg-charcoal/80 text-white flex items-center justify-center hover:bg-white hover:text-charcoal transition-all border border-zincBorderDark">
+        ✕
+      </button>
+
+      <div class="bg-black flex items-center justify-center max-h-[75vh] p-2">
+        <img id="lightboxImg" src="" alt="Expanded View" class="max-h-[75vh] w-auto object-contain">
+      </div>
+
+      <div class="p-5 bg-surfaceDark border-t border-zincBorderDark">
+        <p id="lightboxCaption" class="text-xs sm:text-sm font-mono text-midGrey text-center"></p>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    function switchBatch(batchId) {
+      const panels = document.querySelectorAll('.batch-panel');
+      panels.forEach(panel => {
+        panel.classList.add('hidden-panel');
+      });
+
+      const activePanel = document.getElementById(`panel-${batchId}`);
+      if (activePanel) {
+        activePanel.classList.remove('hidden-panel');
+      }
+
+      const tabs = document.querySelectorAll('.batch-tab');
+      tabs.forEach(tab => {
+        tab.classList.remove('bg-charcoal', 'text-white');
+        tab.classList.add('bg-surface', 'text-charcoal');
+      });
+
+      const activeTab = document.getElementById(`tab-${batchId}`);
+      if (activeTab) {
+        activeTab.classList.remove('bg-surface', 'text-charcoal');
+        activeTab.classList.add('bg-charcoal', 'text-white');
+      }
+    }
+
+    function openLightbox(imageSrc, captionText) {
+      const modal = document.getElementById('lightboxModal');
+      const lightboxImg = document.getElementById('lightboxImg');
+      const lightboxCaption = document.getElementById('lightboxCaption');
+
+      lightboxImg.src = imageSrc;
+      lightboxCaption.innerText = captionText;
+
+      lightboxImg.onerror = function() {
+        lightboxImg.src = `https://placehold.co/800x500/09090b/ffffff?text=${encodeURIComponent(captionText)}`;
+      };
+
+      modal.classList.remove('hidden');
+      document.body.style.overflow = 'hidden';
+    }
+
+    function closeLightbox() {
+      const modal = document.getElementById('lightboxModal');
+      modal.classList.add('hidden');
+      document.body.style.overflow = 'auto';
+    }
+
+    function handleImageError(imgElement, placeholderText) {
+      imgElement.onerror = null;
+      imgElement.src = `https://placehold.co/800x600/18181b/ffffff?text=${encodeURIComponent(placeholderText)}`;
+    }
+
+    document.addEventListener('keydown', function(e) {
+      if (e.key === 'Escape') {
+        closeLightbox();
+      }
+    });
+  </script>
+</body>
+</html>
